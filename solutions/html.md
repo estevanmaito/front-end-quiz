@@ -46,10 +46,63 @@ First of all, you should always use a language attribute on the ```html``` tag t
 </html>
 ```
 
-As the [W3C recommends](https://www.w3.org/TR/2007/NOTE-i18n-html-tech-lang-20070412/#ri20050208.095812479):
+As [W3C recommends](https://www.w3.org/TR/2007/NOTE-i18n-html-tech-lang-20070412/#ri20050208.095812479):
 
 > In short, this document recommends that you always declare the language of content to support text-processing needs. We recommend that you do so using attributes in the html element (to set the default language for the whole document) and on any element containing content in a different language.
 
 Read more: https://www.w3.org/International/questions/qa-html-language-declarations
 
 https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes
+
+### 6) What kind of things must you be wary of when design or developing for multilingual sites?
+
+- Declare the language of content (ex: ```<html lang="en-US">```)
+- If needed, setup right-to-left text direction by adding ```dir="rtl"``` to the ```html``` tag or only to the required elements
+- Localize date and time formats
+- Don't decide for the user their preferred language. Let the user choose, or at least change to another language
+- Present language options
+- Some languages are more "wordy". A button "add to cart" might be translated in Dutch to "aan winkelwagen toevoegen". Consider this when designing
+- URL structure. You can identify your website using a country top-level domain (ccTLD) like .br for Brazil or .uk for United Kingdom. It's also possible to make the country clear in the URL using a subdomain (ex: france.example.com) or a subdirectory (eg: example.com/fr)
+
+Read more: https://webdesign.tutsplus.com/articles/tips-for-designing-and-building-a-multilingual-website--cms-24708
+
+https://www.w3.org/International/techniques/authoring-html?collapse
+
+### 7) What are ```data-``` attributes good for?
+
+```data-``` attributes allow us to store extra information on standard, semantic HTML. This information may be used by scripts or CSS.
+
+```html
+<section id="car" data-size="3"></section>
+```
+
+```js
+const section = document.querySelector('#car');
+
+section.dataset.size // "3"
+```
+
+```css
+section[data-size='3'] { width: 300px; }
+section::before { content: attr(data-size); }
+```
+
+Read more: https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+
+https://www.sitepoint.com/use-html5-data-attributes/
+
+### 8) Consider HTML5 as an open web platform. What are the building blocks of HTML5?
+
+A non-exausting list of things brought by HTML5:
+
+- Semantics, via new elements like ```main```, ```article```, ```section```, ```header```, etc
+- Storage, with ```localStorage```  and ```sessionStorage```
+- Conectivity, with WebRTC, web workers and web sockets
+- Graphics, with the ```canvas``` element, support for SVG and WebGL
+- Multimedia, with ```video``` and ```audio```
+- new APIs like offline, web storage, drag-and-drop, history, geolocation
+- new ```input``` types like ```tel```, ```email```, ```color```, ```range```
+
+Read more: https://www.w3.org/TR/html5-diff/
+
+https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5
