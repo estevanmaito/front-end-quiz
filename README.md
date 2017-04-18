@@ -1,5 +1,7 @@
 # Front-end quiz
 
+This is a non-exausting list of questions you can use to test yourself or improve your abilities. Solutions are available in the [solutions](https://github.com/estevanmaito/front-end-quiz/tree/master/solutions) folder.
+
 ## HTML
  
 - [ ] What does a ```doctype``` do?
@@ -176,3 +178,11 @@ console.log("b defined? " + (typeof b !== 'undefined'));
   - [ ] ETag
   - [ ] X-Frame-Options
 - [ ] What are HTTP methods? List all HTTP methods that you know, and explain them.
+
+## Thanks
+
+The above questions were collected all around the web, but these resources were invaluable in the process:
+
+- [H5BP](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
+- [Toptal](https://www.toptal.com)
+- [Sitepoint](http://www.sitepoint.com/)
