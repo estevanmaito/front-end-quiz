@@ -32,11 +32,11 @@ This is a non-exausting list of questions you can use to test yourself or improv
 
 ## CSS
 
-1. [ ] What is the difference between classes and IDs in CSS?
-1. [ ] What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
-1. [ ] Describe Floats and how they work.
-1. [ ] Describe z-index and how stacking context is formed.
-1. [ ] Describe BFC(Block Formatting Context) and how it works.
+1. [x] What is the difference between classes and IDs in CSS?
+1. [x] What's the difference between "resetting" and "normalizing" CSS? Which would you choose, and why?
+1. [x] Describe Floats and how they work.
+1. [x] Describe z-index and how stacking context is formed.
+1. [x] Describe BFC(Block Formatting Context) and how it works.
 1. [ ] What are the various clearing techniques and which is appropriate for what context?
 1. [ ] Explain CSS sprites, and how you would implement them on a page or site.
 1. [ ] What are your favourite image replacement techniques and which do you use when?
