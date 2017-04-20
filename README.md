@@ -70,7 +70,7 @@ This is a non-exausting list of questions you can use to test yourself or improv
 1. [ ] What is grouping and what is it used for?
 1. [ ] How to restore the default property value using CSS?
 1. [ ] What are the advantages and disadvantages of External Style Sheets?
-1. [ ] Explain the difference between ```visibility:hidden``` and ```display:none```
+1. [x] Explain the difference between ```visibility:hidden``` and ```display:none```
 
 ## JavaScript
 
