@@ -135,5 +135,76 @@ Read more: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
 
 ### 11) Why is it generally a good idea to position CSS ```<link>```s between ```<head></head>``` and JS ```<script>```s just before ```</body>```? Do you know any exceptions?
 
+By default, CSS is treated as a **render blocking** resource, which means that the browser won't render any processed content until the CSSOM is constructed.
+
+The browser steps on rendering:
+
+1. Process HTML markup and build the DOM tree.
+1. Process CSS markup and build the CSSOM tree.
+1. Combine the DOM and CSSOM into a render tree.
+1. Run layout on the render tree to compute geometry of each node.
+1. Paint the individual nodes to the screen.
+
+If either the DOM or CSSOM were modified, you would have to repeat the process in order to figure out which pixels would need to be re-rendered on the screen.
+
+By default, JavaScript execution is **parser blocking**. When the browser encounters a script tag, DOM construction pauses until the script finishes executing. Also, JavaScript exectution pauses until the CSSOM is ready.
+
+The script is executed at the exact point where it is inserted in the document. When the HTML parser encounters a script tag, it pauses its process of constructing the DOM and yields control to the JavaScript engine; after the JavaScript engine finishes running, the browser then picks up where it left off and resumes DOM construction.
+
+In other words, our script block can't find any elements later in the page because they haven't been processed yet! Or, put slightly differently: executing our inline script blocks DOM construction, which also delays the initial render.
+
 Read more: https://html.spec.whatwg.org/multipage/semantics.html#the-link-element
 
+https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css
+
+https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript
+
+### 12) What is progressive rendering?
+
+It's the name given to techniques for rendering content as soon as possible.
+
+Read more: https://jakearchibald.com/2016/streams-ftw/
+
+https://medium.com/ben-and-dion/progressive-rendering-a-killer-and-under-appreciated-feature-of-the-web-97c789b608c1
+
+### 13) Have you used different HTML templating languages before?
+
+This one is personal, but here are some HTML templating languages:
+
+- [Mustache](https://mustache.github.io/)
+- [Handlebars](http://handlebarsjs.com/)
+- [Pug](https://pugjs.org)
+- [EJS](http://www.embeddedjs.com/)
+
+### 14) What were some of the key goals and motivations for the HTML5 specification?
+
+- Better support for web applications
+- Make web content authoring more uniform
+- Native integration with interfaces like GPS, camera, etc
+- Eliminate plugins
+
+### 15) What are some of the key new features in HTML5?
+
+Web workers, offline storage, drag-and-drop, new semantic elements, audio and video.
+
+### 16) What are “web workers”?
+
+Web Workers are a mechanism by which a script operation can be made to run in a background thread separate from the main execution thread of a web application. The advantage of this is that laborious processing can be performed in a separate thread, allowing the main (usually the UI) thread to run without being blocked/slowed down.
+
+Read more: https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API
+
+https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
+
+### 17) How do you indicate the character set being used by an HTML5 document? How does this differ from older HTML standards?
+
+By placing the following meta right after ```<head>```:
+
+```html
+<meta charset="utf-8">
+```
+
+This replaces the need for ```<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">``` although that syntax is still allowed.
+
+Read more: https://www.w3.org/TR/html5-diff/#character-encoding
+
+https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5#Declaring_the_character_set_with_the_<meta_charset>

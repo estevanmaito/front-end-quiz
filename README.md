@@ -15,12 +15,12 @@ This is a non-exausting list of questions you can use to test yourself or improv
 1. [x] Describe the difference between a ```cookie```, ```sessionStorage``` and ```localStorage```.
 1. [x] Describe the difference between ```<script>```, ```<script async>``` and ```<script defer>```.
 1. [x] Why is it generally a good idea to position CSS ```<link>```s between ```<head></head>``` and JS ```<script>```s just before ```</body>```? Do you know any exceptions?
-1. [ ] What is progressive rendering?
-1. [ ] Have you used different HTML templating languages before?
-1. [ ] What were some of the key goals and motivations for the HTML5 specification?
-1. [ ] What are some of the key new features in HTML5?
-1. [ ] What are “web workers”?
-1. [ ] How do you indicate the character set being used by an HTML5 document? How does this differ from older HTML standards?
+1. [x] What is progressive rendering?
+1. [x] Have you used different HTML templating languages before?
+1. [x] What were some of the key goals and motivations for the HTML5 specification?
+1. [x] What are some of the key new features in HTML5?
+1. [x] What are “web workers”?
+1. [x] How do you indicate the character set being used by an HTML5 document? How does this differ from older HTML standards?
 1. [ ] Discuss the differences between an HTML specification and a browser’s implementation thereof.
 1. [ ] Briefly describe the correct usage of the following HTML5 semantic elements: ```<header>```, ```<article>```, ```<section>```, ```<footer>```.
 1. [ ] Can a ```<section>``` contain ```<article>``` elements? Can an ```<article>``` contain ```<section>``` elements? Provide usage examples.
