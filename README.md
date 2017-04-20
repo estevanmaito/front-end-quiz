@@ -12,9 +12,9 @@ This is a non-exausting list of questions you can use to test yourself or improv
 1. [x] What kind of things must you be wary of when design or developing for multilingual sites?
 1. [x] What are ```data-``` attributes good for?
 1. [x] Consider HTML5 as an open web platform. What are the building blocks of HTML5?
-1. [ ] Describe the difference between a ```cookie```, ```sessionStorage``` and ```localStorage```.
-1. [ ] Describe the difference between ```<script>```, ```<script async>``` and ```<script defer>```.
-1. [ ] Why is it generally a good idea to position CSS ```<link>```s between ```<head></head>``` and JS ```<script>```s just before ```</body>```? Do you know any exceptions?
+1. [x] Describe the difference between a ```cookie```, ```sessionStorage``` and ```localStorage```.
+1. [x] Describe the difference between ```<script>```, ```<script async>``` and ```<script defer>```.
+1. [x] Why is it generally a good idea to position CSS ```<link>```s between ```<head></head>``` and JS ```<script>```s just before ```</body>```? Do you know any exceptions?
 1. [ ] What is progressive rendering?
 1. [ ] Have you used different HTML templating languages before?
 1. [ ] What were some of the key goals and motivations for the HTML5 specification?

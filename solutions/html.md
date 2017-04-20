@@ -106,3 +106,34 @@ A non-exausting list of things brought by HTML5:
 Read more: https://www.w3.org/TR/html5-diff/
 
 https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5
+
+### 9) Describe the difference between a ```cookie```, ```sessionStorage``` and ```localStorage```.
+
+```sessionStorage``` and ```localStorage``` are part of the Web Storage API and they are meant primarily for client-side storage, while ```cookies``` are primarily for reading server-side.
+
+You can send data from the web storage to a server, but it has to be done purposefully, while ```cookies``` are sent to the server within every request.
+
+```sessionStorage``` stores data during the page session so, if you close the tab/window, data will be deleted. ```localStorage``` also stores data on the client-side, but data persists even when the browser is closed and reopened. ```cookies``` 
+
+```cookies``` only allow you to store strings. ```sessionStorage``` and ```localStorage``` allow you to store JavaScript primitives but not Objects or Arrays (it is possible to JSON serialise them to store them using the APIs).
+
+Read more: https://html.spec.whatwg.org/multipage/webstorage.html#the-sessionstorage-attribute
+
+https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
+
+### 10) Describe the difference between ```<script>```, ```<script async>``` and ```<script defer>```.
+
+```<script>``` is the HTML element used to embed or reference an executable script.
+
+```<script async>``` indicates to the browser that it should, if possible, execute the script asynchronously.
+
+```<script defer>``` indicates to the broswer that it should execute the script after the document has been parsed, but before firin DOMContentLoaded.
+
+Read more: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
+
+### 11) Why is it generally a good idea to position CSS ```<link>```s between ```<head></head>``` and JS ```<script>```s just before ```</body>```? Do you know any exceptions?
+
+Read more: https://html.spec.whatwg.org/multipage/semantics.html#the-link-element
+
