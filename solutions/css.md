@@ -1,6 +1,6 @@
 ### 1) What is the difference between classes and IDs in CSS?
 
-ID selectors are more specific than class selectors, so it takes precedence on apllying styles to an element.
+ID selectors are more specific than class selectors, so it takes precedence on applying styles to an element.
 
 Read more: https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
 
@@ -22,7 +22,7 @@ http://nicolasgallagher.com/about-normalize-css/
 
 ### 3) Describe Floats and how they work.
 
-Float is a CSS positioning property. The element it's aplied to is taken from the normal flow of the page, though still remaining a part of the flow, contrary to absolute positioning.
+Float is a CSS positioning property. The element it's applied to is taken from the normal flow of the page, though still remaining a part of the flow, contrary to absolute positioning.
 
 Read more: https://css-tricks.com/all-about-floats/
 
