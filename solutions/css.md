@@ -55,6 +55,14 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z
 
 ### 5) Describe BFC(Block Formatting Context) and how it works.
 
+A Block Formatting Context is part of the visual CSS rendering of a web page in which block boxes are laid out, that satisfies at least one of the following conditions:
+
+- The value of ```float``` is not ```none```
+- The value of ```position``` is neither ```static``` nor ```relative```
+- The value of ```display``` is ```table-cell```, ```table-caption```, ```inline-block```, ```flex```, or ```inline-flex```
+- The value of ```overflow``` is not ```visible```.
+
+In a block formatting context, each box’s left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch). This is true even in the presence of floats (although a box’s line boxes may shrink due to the floats), unless the box establishes a new block formatting context (in which case the box itself may become narrower due to the floats).
 
 Read more: https://www.w3.org/TR/CSS21/visuren.html#block-formatting
 
