@@ -21,14 +21,13 @@ This is a non-exausting list of questions you can use to test yourself or improv
 1. [x] What are some of the key new features in HTML5?
 1. [x] What are “web workers”?
 1. [x] How do you indicate the character set being used by an HTML5 document? How does this differ from older HTML standards?
-1. [ ] Discuss the differences between an HTML specification and a browser’s implementation thereof.
-1. [ ] Briefly describe the correct usage of the following HTML5 semantic elements: ```<header>```, ```<article>```, ```<section>```, ```<footer>```.
-1. [ ] Can a ```<section>``` contain ```<article>``` elements? Can an ```<article>``` contain ```<section>``` elements? Provide usage examples.
-1. [ ] Can a web page contain multiple ```<header>``` elements? What about ```<footer>``` elements?
-1. [ ] Describe the relationship between the ```<header>``` and ```<h1>``` tags in HTML1.
-1. [ ] Give a simple implementation of the ```<video>``` tag to embed a video stored at http://www.example.com/amazing_video.mp1. Give the video a width of 640 pixels by 360 pixels. Provide the user with controls.
-1. [ ] Write the code necessary to create a 300 pixel by 300 pixel ```<canvas>```. Within it, paint a blue 100 pixel by 100 pixel square with the top-left corner of the square located 50 pixels from both the top and left edges of the canvas.
-1. [ ] What is HTML5 Web Storage? Explain localStorage and sessionStorage.
+1. [x] Discuss the differences between an HTML specification and a browser’s implementation thereof.
+1. [x] Briefly describe the correct usage of the following HTML5 semantic elements: ```<header>```, ```<article>```, ```<section>```, ```<footer>```.
+1. [x] Can a ```<section>``` contain ```<article>``` elements? Can an ```<article>``` contain ```<section>``` elements? Provide usage examples.
+1. [x] Can a web page contain multiple ```<header>``` elements? What about ```<footer>``` elements?
+1. [x] Describe the relationship between the ```<header>``` and ```<h1>``` tags in HTML5.
+1. [x] Give a simple implementation of the ```<video>``` tag to embed a video stored at http://www.example.com/amazing_video.mp1. Give the video a width of 640 pixels by 360 pixels. Provide the user with controls.
+1. [x] Write the code necessary to create a 300 pixel by 300 pixel ```<canvas>```. Within it, paint a blue 100 pixel by 100 pixel square with the top-left corner of the square located 50 pixels from both the top and left edges of the canvas.
 
 ## CSS
 

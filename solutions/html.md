@@ -208,3 +208,125 @@ This replaces the need for ```<meta http-equiv="Content-Type" content="text/html
 Read more: https://www.w3.org/TR/html5-diff/#character-encoding
 
 [Declaring the character set with the <meta charset>](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5#Declaring_the_character_set_with_the_<meta_charset>)
+
+### 18) Discuss the differences between an HTML specification and a browser’s implementation thereof.
+
+HTML specifications define a set of rules that a document must adhere to in order to be "valid" according to that specification. In addition, a specification provides instructions on how a browser must interpret and render such a document. A browser is said to "support" a specification if it handles valid documents according to the rules of the specification.
+
+Read more: https://wiki.whatwg.org/wiki/FAQ#HTML
+
+https://w3c.github.io/test-results/html51/implementation-report.html
+
+### 19) Briefly describe the correct usage of the following HTML5 semantic elements: ```<header>```, ```<article>```, ```<section>```, ```<footer>```.
+
+- ```<header>```: represents introductory content for its nearest ancestor sectioning content or sectioning root element. A header typically contains a group of **introductory or navigational** aids.
+- ```<article>```: represents a complete, or **self-contained**, composition in a document, page, application, or site and that is, in principle, **independently** distributable or **reusable**.
+- ```<section>```: Trepresents a **generic** section of a document or application. A section, in this context, is a **thematic grouping of content**, typically with a heading.
+- ```<footer>```: represents a footer for its nearest ancestor sectioning content or sectioning root element. A footer typically contains information about its section such as who wrote it, links to related documents, copyright data, and the like.
+
+Read more: https://www.w3.org/TR/html5/sections.html#the-header-element
+
+https://www.w3.org/TR/html5/sections.html#the-article-element
+
+https://www.w3.org/TR/html5/sections.html#the-section-element
+
+https://www.w3.org/TR/html5/sections.html#the-footer-element
+
+https://www.iandevlin.com/blog/2011/04/html5/html5-section-or-article
+
+### 20) Can a ```<section>``` contain ```<article>``` elements? Can an ```<article>``` contain ```<section>``` elements? Provide usage examples.
+
+Yes, a ```<section>``` can contain ```<article>``` elements, as it is a **thematic grouping of content**. So, it can, among other uses, be used to group related ```articles``` in a document.
+
+```html
+<section>
+  <header>
+    <h2>News</h2>
+    <p>What is happening today</p>
+  </header>
+  <article>
+    <h3>Sports</h3>
+    ...
+  </article>
+  <article>
+    <h3>Politics</h3>
+    ...
+  </article>
+  <article>
+    <h3>World</h3>
+    ...
+  </article>
+</section>
+```
+
+Also, ```<article>``` can contain ```<section>``` elements, where sections group related content.
+
+```html
+<article>
+  <header>
+    <h2>Apples</h2>
+    <p>Tasty, delicious fruit!</p>
+  </header>
+  <p>The apple is the pomaceous fruit of the apple tree.</p>
+  <section>
+    <h3>Red Delicious</h3>
+    <p>These bright red apples are the most common found in many
+    supermarkets.</p>
+  </section>
+  <section>
+    <h3>Granny Smith</h3>
+    <p>These juicy, green apples make a great filling for
+    apple pies.</p>
+  </section>
+</article>
+```
+
+Read more: https://www.w3.org/TR/html5/sections.html#the-article-element
+
+https://www.w3.org/TR/html5/sections.html#the-section-element
+
+https://www.iandevlin.com/blog/2011/04/html5/html5-section-or-article (must read!)
+
+### 21) Can a web page contain multiple ```<header>``` elements? What about ```<footer>``` elements?
+
+Yes, they usually provide content for their nearest ancestor sectioning content or sectioning root element. None can have ```<header>```, ```<footer>``` or ```<main>``` element descendants.
+
+Read more: https://www.w3.org/TR/html5/sections.html#the-header-element
+
+https://www.w3.org/TR/html5/sections.html#the-footer-element
+
+### 22) Describe the relationship between the ```<header>``` and ```<h1>``` tags in HTML5.
+
+```<h1>``` is a typographic element used primarily to describe the most important heading in a document, while the ```<header>``` element is used as a grouping element that contains introductory content for its nearest ancestor sectioning content or sectioning root element, typically a group of **introductory or navigational** aids.
+
+Read more: https://www.w3.org/TR/html5/sections.html#the-header-element
+
+https://www.w3.org/TR/html5/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements
+
+### 23) Give a simple implementation of the ```<video>``` tag to embed a video stored at http://www.example.com/amazing_video.mp1. Give the video a width of 640 pixels by 360 pixels. Provide the user with controls.
+
+```html
+<video src="http://www.example.com/amazing_video.mp1" width="640" height="360" controls></video>
+```
+
+Read more: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+
+### 24) Write the code necessary to create a 300 pixel by 300 pixel ```<canvas>```. Within it, paint a blue 100 pixel by 100 pixel square with the top-left corner of the square located 50 pixels from both the top and left edges of the canvas.
+
+```html
+<canvas width="300" height="300" id="canvas"></canvas>
+```
+
+```js
+let canvas = document.querySelector('#canvas');
+let ctx = canvas.getContext('2d');
+
+ctx.fillStyle = '#0000FF';
+ctx.fillRect(50, 50, 100, 100);
+```
+
+Read more: https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage
+
+https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
+
+https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
