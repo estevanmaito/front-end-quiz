@@ -207,4 +207,4 @@ This replaces the need for ```<meta http-equiv="Content-Type" content="text/html
 
 Read more: https://www.w3.org/TR/html5-diff/#character-encoding
 
-https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5#Declaring_the_character_set_with_the_<meta_charset>
+[Declaring the character set with the <meta charset>](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5#Declaring_the_character_set_with_the_<meta_charset>)
