@@ -150,6 +150,7 @@ console.log("b defined? " + (typeof b !== 'undefined'));
 ```
 1. [ ] What is ```NaN```? What is its type? How can you reliably test if a value is equal to NaN?
 1. [ ] Discuss possible ways to write a function ```isInteger(x)``` that determines if ```x``` is an integer.
+1. [ ] What is the main advantage of using the ```addEventListener``` method to register an event handler versus assigning a handler to a specific element property?
 
 ## Testing
 
