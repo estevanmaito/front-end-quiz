@@ -1,6 +1,6 @@
-### 1) What does a ```doctype``` do?
+### 1) What does a `doctype` do?
 
-The ```doctype``` tells the user agent (aka web browsers) what type of HTML document it is intended to parse. This makes sure the document will be parsed the same way by different browsers.
+The `doctype` tells the user agent (aka web browsers) what type of HTML document it is intended to parse. This makes sure the document will be parsed the same way by different browsers.
 
 The simplest and most reliable doctype declaration to use is the one defined in HTML5:
 
@@ -9,7 +9,6 @@ The simplest and most reliable doctype declaration to use is the one defined in 
 ```
 
 Read more: https://www.w3.org/QA/2002/04/valid-dtd-list.html
-
 
 ### 2) What's the difference between full standards mode, almost standards mode and quirks mode?
 
@@ -25,9 +24,9 @@ Read more: https://developer.mozilla.org/en-US/docs/Quirks_Mode_and_Standards_Mo
 
 XHTML is XML, HTML is not. XHTML's rules follow XML's stricter rules, like closing tag for each opening tag and attributes must have a value.
 
-### 4) Are there any problems with serving pages as ```application/xhtml+xml```?
+### 4) Are there any problems with serving pages as `application/xhtml+xml`?
 
-Serving pages as ```application/xhtml+xml``` will cause Internet Explorer 8 to show a download dialog box for an unknown format instead of displaying your page, as the first version of Internet Explorer with support for XHTML is Internet Explorer 9.
+Serving pages as `application/xhtml+xml` will cause Internet Explorer 8 to show a download dialog box for an unknown format instead of displaying your page, as the first version of Internet Explorer with support for XHTML is Internet Explorer 9.
 
 Read more: https://developer.mozilla.org/en-US/docs/Quirks_Mode_and_Standards_Mode#XHTML
 
@@ -35,7 +34,7 @@ Read more: https://developer.mozilla.org/en-US/docs/Quirks_Mode_and_Standards_Mo
 
 This is a tricky question. Not in the sense that the answer to it is difficult, but it requires interpretation. Note that a page with **content** in multiple languages is the same page with different sections in different languages, which isn't the same as interpreting this as serving a page in multiple languages, in which case you would consider multiple ways of serving it, like multiple files, each one in a different language. It may seem obvious until you google for this exact same question and read people's answers.
 
-First of all, you should always use a language attribute on the ```html``` tag to declare the default language of the text in the page. When the page contains content in another language, add a language attribute to an element surrounding that content.
+First of all, you should always use a language attribute on the `html` tag to declare the default language of the text in the page. When the page contains content in another language, add a language attribute to an element surrounding that content.
 
 ```html
 <!DOCTYPE html>
@@ -56,8 +55,8 @@ https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes
 
 ### 6) What kind of things must you be wary of when design or developing for multilingual sites?
 
-- Declare the language of content (ex: ```<html lang="en-US">```)
-- If needed, setup right-to-left text direction by adding ```dir="rtl"``` to the ```html``` tag or only to the required elements
+- Declare the language of content (ex: `<html lang="en-US">`)
+- If needed, setup right-to-left text direction by adding `dir="rtl"` to the `html` tag or only to the required elements
 - Localize date and time formats
 - Don't decide for the user their preferred language. Let the user choose, or at least change to another language
 - Present language options
@@ -68,23 +67,27 @@ Read more: https://webdesign.tutsplus.com/articles/tips-for-designing-and-buildi
 
 https://www.w3.org/International/techniques/authoring-html?collapse
 
-### 7) What are ```data-``` attributes good for?
+### 7) What are `data-` attributes good for?
 
-```data-``` attributes allow us to store extra information on standard, semantic HTML. This information may be used by scripts or CSS.
+`data-` attributes allow us to store extra information on standard, semantic HTML. This information may be used by scripts or CSS.
 
 ```html
 <section id="car" data-size="3"></section>
 ```
 
 ```js
-const section = document.querySelector('#car');
+const section = document.querySelector('#car')
 
 section.dataset.size // "3"
 ```
 
 ```css
-section[data-size='3'] { width: 300px; }
-section::before { content: attr(data-size); }
+section[data-size='3'] {
+  width: 300px;
+}
+section::before {
+  content: attr(data-size);
+}
 ```
 
 Read more: https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
@@ -95,27 +98,27 @@ https://www.sitepoint.com/use-html5-data-attributes/
 
 A non-exausting list of things brought by HTML5:
 
-- Semantics, via new elements like ```main```, ```article```, ```section```, ```header```, etc
-- Storage, with ```localStorage```  and ```sessionStorage```
+- Semantics, via new elements like `main`, `article`, `section`, `header`, etc
+- Storage, with `localStorage` and `sessionStorage`
 - Conectivity, with WebRTC, web workers and web sockets
-- Graphics, with the ```canvas``` element, support for SVG and WebGL
-- Multimedia, with ```video``` and ```audio```
+- Graphics, with the `canvas` element, support for SVG and WebGL
+- Multimedia, with `video` and `audio`
 - new APIs like offline, web storage, drag-and-drop, history, geolocation
-- new ```input``` types like ```tel```, ```email```, ```color```, ```range```
+- new `input` types like `tel`, `email`, `color`, `range`
 
 Read more: https://www.w3.org/TR/html5-diff/
 
 https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5
 
-### 9) Describe the difference between a ```cookie```, ```sessionStorage``` and ```localStorage```.
+### 9) Describe the difference between a `cookie`, `sessionStorage` and `localStorage`.
 
-```sessionStorage``` and ```localStorage``` are part of the Web Storage API and they are meant primarily for client-side storage, while ```cookies``` are primarily for reading server-side.
+`sessionStorage` and `localStorage` are part of the Web Storage API and they are meant primarily for client-side storage, while `cookies` are primarily for reading server-side.
 
-You can send data from the web storage to a server, but it has to be done purposefully, while ```cookies``` are sent to the server within every request.
+You can send data from the web storage to a server, but it has to be done purposefully, while `cookies` are sent to the server within every request.
 
-```sessionStorage``` stores data during the page session so, if you close the tab/window, data will be deleted. ```localStorage``` also stores data on the client-side, but data persists even when the browser is closed and reopened. ```cookies``` 
+`sessionStorage` stores data during the page session so, if you close the tab/window, data will be deleted. `localStorage` also stores data on the client-side, but data persists even when the browser is closed and reopened. `cookies`
 
-```cookies``` only allow you to store strings. ```sessionStorage``` and ```localStorage``` allow you to store JavaScript primitives but not Objects or Arrays (it is possible to JSON serialise them to store them using the APIs).
+`cookies` only allow you to store strings. `sessionStorage` and `localStorage` allow you to store JavaScript primitives but not Objects or Arrays (it is possible to JSON serialise them to store them using the APIs).
 
 Read more: https://html.spec.whatwg.org/multipage/webstorage.html#the-sessionstorage-attribute
 
@@ -123,17 +126,17 @@ https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
 
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
 
-### 10) Describe the difference between ```<script>```, ```<script async>``` and ```<script defer>```.
+### 10) Describe the difference between `<script>`, `<script async>` and `<script defer>`.
 
-```<script>``` is the HTML element used to embed or reference an executable script.
+`<script>` is the HTML element used to embed or reference an executable script.
 
-```<script async>``` indicates to the browser that it should, if possible, execute the script asynchronously.
+`<script async>` indicates to the browser that it should, if possible, execute the script asynchronously.
 
-```<script defer>``` indicates to the broswer that it should execute the script after the document has been parsed, but before firin DOMContentLoaded.
+`<script defer>` indicates to the broswer that it should execute the script after the document has been parsed, but before firin DOMContentLoaded.
 
 Read more: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
 
-### 11) Why is it generally a good idea to position CSS ```<link>```s between ```<head></head>``` and JS ```<script>```s just before ```</body>```? Do you know any exceptions?
+### 11) Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
 
 By default, CSS is treated as a **render blocking** resource, which means that the browser won't render any processed content until the CSSOM is constructed.
 
@@ -197,13 +200,13 @@ https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_worke
 
 ### 17) How do you indicate the character set being used by an HTML5 document? How does this differ from older HTML standards?
 
-By placing the following meta right after ```<head>```:
+By placing the following meta right after `<head>`:
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 ```
 
-This replaces the need for ```<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">``` although that syntax is still allowed.
+This replaces the need for `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">` although that syntax is still allowed.
 
 Read more: https://www.w3.org/TR/html5-diff/#character-encoding
 
@@ -217,12 +220,12 @@ Read more: https://wiki.whatwg.org/wiki/FAQ#HTML
 
 https://w3c.github.io/test-results/html51/implementation-report.html
 
-### 19) Briefly describe the correct usage of the following HTML5 semantic elements: ```<header>```, ```<article>```, ```<section>```, ```<footer>```.
+### 19) Briefly describe the correct usage of the following HTML5 semantic elements: `<header>`, `<article>`, `<section>`, `<footer>`.
 
-- ```<header>```: represents introductory content for its nearest ancestor sectioning content or sectioning root element. A header typically contains a group of **introductory or navigational** aids.
-- ```<article>```: represents a complete, or **self-contained**, composition in a document, page, application, or site and that is, in principle, **independently** distributable or **reusable**.
-- ```<section>```: Trepresents a **generic** section of a document or application. A section, in this context, is a **thematic grouping of content**, typically with a heading.
-- ```<footer>```: represents a footer for its nearest ancestor sectioning content or sectioning root element. A footer typically contains information about its section such as who wrote it, links to related documents, copyright data, and the like.
+- `<header>`: represents introductory content for its nearest ancestor sectioning content or sectioning root element. A header typically contains a group of **introductory or navigational** aids.
+- `<article>`: represents a complete, or **self-contained**, composition in a document, page, application, or site and that is, in principle, **independently** distributable or **reusable**.
+- `<section>`: Trepresents a **generic** section of a document or application. A section, in this context, is a **thematic grouping of content**, typically with a heading.
+- `<footer>`: represents a footer for its nearest ancestor sectioning content or sectioning root element. A footer typically contains information about its section such as who wrote it, links to related documents, copyright data, and the like.
 
 Read more: https://www.w3.org/TR/html5/sections.html#the-header-element
 
@@ -234,9 +237,9 @@ https://www.w3.org/TR/html5/sections.html#the-footer-element
 
 https://www.iandevlin.com/blog/2011/04/html5/html5-section-or-article
 
-### 20) Can a ```<section>``` contain ```<article>``` elements? Can an ```<article>``` contain ```<section>``` elements? Provide usage examples.
+### 20) Can a `<section>` contain `<article>` elements? Can an `<article>` contain `<section>` elements? Provide usage examples.
 
-Yes, a ```<section>``` can contain ```<article>``` elements, as it is a **thematic grouping of content**. So, it can, among other uses, be used to group related ```articles``` in a document.
+Yes, a `<section>` can contain `<article>` elements, as it is a **thematic grouping of content**. So, it can, among other uses, be used to group related `articles` in a document.
 
 ```html
 <section>
@@ -259,7 +262,7 @@ Yes, a ```<section>``` can contain ```<article>``` elements, as it is a **themat
 </section>
 ```
 
-Also, ```<article>``` can contain ```<section>``` elements, where sections group related content.
+Also, `<article>` can contain `<section>` elements, where sections group related content.
 
 ```html
 <article>
@@ -270,13 +273,11 @@ Also, ```<article>``` can contain ```<section>``` elements, where sections group
   <p>The apple is the pomaceous fruit of the apple tree.</p>
   <section>
     <h3>Red Delicious</h3>
-    <p>These bright red apples are the most common found in many
-    supermarkets.</p>
+    <p>These bright red apples are the most common found in many supermarkets.</p>
   </section>
   <section>
     <h3>Granny Smith</h3>
-    <p>These juicy, green apples make a great filling for
-    apple pies.</p>
+    <p>These juicy, green apples make a great filling for apple pies.</p>
   </section>
 </article>
 ```
@@ -287,23 +288,23 @@ https://www.w3.org/TR/html5/sections.html#the-section-element
 
 https://www.iandevlin.com/blog/2011/04/html5/html5-section-or-article (must read!)
 
-### 21) Can a web page contain multiple ```<header>``` elements? What about ```<footer>``` elements?
+### 21) Can a web page contain multiple `<header>` elements? What about `<footer>` elements?
 
-Yes, they usually provide content for their nearest ancestor sectioning content or sectioning root element. None can have ```<header>```, ```<footer>``` or ```<main>``` element descendants.
+Yes, they usually provide content for their nearest ancestor sectioning content or sectioning root element. None can have `<header>`, `<footer>` or `<main>` element descendants.
 
 Read more: https://www.w3.org/TR/html5/sections.html#the-header-element
 
 https://www.w3.org/TR/html5/sections.html#the-footer-element
 
-### 22) Describe the relationship between the ```<header>``` and ```<h1>``` tags in HTML5.
+### 22) Describe the relationship between the `<header>` and `<h1>` tags in HTML5.
 
-```<h1>``` is a typographic element used primarily to describe the most important heading in a document, while the ```<header>``` element is used as a grouping element that contains introductory content for its nearest ancestor sectioning content or sectioning root element, typically a group of **introductory or navigational** aids.
+`<h1>` is a typographic element used primarily to describe the most important heading in a document, while the `<header>` element is used as a grouping element that contains introductory content for its nearest ancestor sectioning content or sectioning root element, typically a group of **introductory or navigational** aids.
 
 Read more: https://www.w3.org/TR/html5/sections.html#the-header-element
 
 https://www.w3.org/TR/html5/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements
 
-### 23) Give a simple implementation of the ```<video>``` tag to embed a video stored at http://www.example.com/amazing_video.mp1. Give the video a width of 640 pixels by 360 pixels. Provide the user with controls.
+### 23) Give a simple implementation of the `<video>` tag to embed a video stored at http://www.example.com/amazing_video.mp1. Give the video a width of 640 pixels by 360 pixels. Provide the user with controls.
 
 ```html
 <video src="http://www.example.com/amazing_video.mp1" width="640" height="360" controls></video>
@@ -311,18 +312,18 @@ https://www.w3.org/TR/html5/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-element
 
 Read more: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
 
-### 24) Write the code necessary to create a 300 pixel by 300 pixel ```<canvas>```. Within it, paint a blue 100 pixel by 100 pixel square with the top-left corner of the square located 50 pixels from both the top and left edges of the canvas.
+### 24) Write the code necessary to create a 300 pixel by 300 pixel `<canvas>`. Within it, paint a blue 100 pixel by 100 pixel square with the top-left corner of the square located 50 pixels from both the top and left edges of the canvas.
 
 ```html
 <canvas width="300" height="300" id="canvas"></canvas>
 ```
 
 ```js
-let canvas = document.querySelector('#canvas');
-let ctx = canvas.getContext('2d');
+let canvas = document.querySelector('#canvas')
+let ctx = canvas.getContext('2d')
 
-ctx.fillStyle = '#0000FF';
-ctx.fillRect(50, 50, 100, 100);
+ctx.fillStyle = '#0000FF'
+ctx.fillRect(50, 50, 100, 100)
 ```
 
 Read more: https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage

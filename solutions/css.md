@@ -12,7 +12,7 @@ Normalizers aim to make all built-in browser styling **consistent** across brows
 
 If you would like to implement your own styles for every element from the ground up, including tests and bug fixes, a reset is the way to go.
 
-On the other hand, if you want to begin from a foundation, with inconsistencies across browsers *normalized*, normalizers to the rescue!
+On the other hand, if you want to begin from a foundation, with inconsistencies across browsers _normalized_, normalizers to the rescue!
 
 I prefer the last.
 
@@ -30,24 +30,24 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/float?v=control
 
 ### 4) Describe z-index and how stacking context is formed.
 
-The ```z-index``` property controls the stacking of elements that overlap.
+The `z-index` property controls the stacking of elements that overlap.
 
 Stacking context is the three-dimensional conceptualization of HTML elements along an imaginary z-axis relative to the user who is assumed to be facing the viewport or the webpage.
 
 A stacking context is formed, anywhere in the document, by any element which is either
 
 - the root element (HTML),
-- positioned (absolutely or relatively) with a ```z-index``` value other than "auto",
-- a flex item with a ```z-index``` value other than "auto",that is the parent element ```display: flex|inline-flex```,
-- elements with an ```opacity``` value less than 1,
-- elements with a ```transform``` value other than "none",
-- elements with a ```mix-blend-mode``` value other than "normal",
-- elements with a ```filter``` value other than "none",
-- elements with a ```perspective``` value other than "none",
-- elements with ```isolation``` set to "isolate",
+- positioned (absolutely or relatively) with a `z-index` value other than "auto",
+- a flex item with a `z-index` value other than "auto",that is the parent element `display: flex|inline-flex`,
+- elements with an `opacity` value less than 1,
+- elements with a `transform` value other than "none",
+- elements with a `mix-blend-mode` value other than "normal",
+- elements with a `filter` value other than "none",
+- elements with a `perspective` value other than "none",
+- elements with `isolation` set to "isolate",
 - position: fixed
-- specifying any attribute above in ```will-change``` even if you don't specify values for these attributes directly
-- elements with ```-webkit-overflow-scrolling``` set to "touch"
+- specifying any attribute above in `will-change` even if you don't specify values for these attributes directly
+- elements with `-webkit-overflow-scrolling` set to "touch"
 
 Read more: https://developer.mozilla.org/en-US/docs/Web/CSS/z-index?v=control
 
@@ -57,10 +57,10 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z
 
 A Block Formatting Context is part of the visual CSS rendering of a web page in which block boxes are laid out, that satisfies at least one of the following conditions:
 
-- The value of ```float``` is not ```none```
-- The value of ```position``` is neither ```static``` nor ```relative```
-- The value of ```display``` is ```table-cell```, ```table-caption```, ```inline-block```, ```flex```, or ```inline-flex```
-- The value of ```overflow``` is not ```visible```.
+- The value of `float` is not `none`
+- The value of `position` is neither `static` nor `relative`
+- The value of `display` is `table-cell`, `table-caption`, `inline-block`, `flex`, or `inline-flex`
+- The value of `overflow` is not `visible`.
 
 In a block formatting context, each box’s left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch). This is true even in the presence of floats (although a box’s line boxes may shrink due to the floats), unless the box establishes a new block formatting context (in which case the box itself may become narrower due to the floats).
 
@@ -72,9 +72,8 @@ https://www.sitepoint.com/understanding-block-formatting-contexts-in-css/
 
 https://yuiblog.com/blog/2010/05/19/css-101-block-formatting-contexts/
 
+### Explain the difference between `visibility:hidden` and `display:none`
 
-### Explain the difference between ```visibility:hidden``` and ```display:none```
-
-```visibility: hidden``` makes the element invisible, but the element still occupies space in the layout (that is, it's rendered as an empty box), whereas the latter (```display: none```) removes the element entirely from the render tree such that the element is invisible and is not part of the layout.
+`visibility: hidden` makes the element invisible, but the element still occupies space in the layout (that is, it's rendered as an empty box), whereas the latter (`display: none`) removes the element entirely from the render tree such that the element is invisible and is not part of the layout.
 
 Read more: https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction
